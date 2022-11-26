@@ -1,0 +1,178 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+
+
+@font-face {
+    font-family: 'font-1';
+    src: url(./assets/XanhMono-Regular.ttf);
+}
+body {
+    font-family: 'font-1';
+    background: url(./assets/bg.jpg)fixed center/cover ;
+
+}
+
+h1 {
+    text-transform: uppercase;
+     /* transform le txt en majuscule */
+    letter-spacing: .5px;
+    text-align: center;
+     /* 1rem=16px */
+    font-size: 5rem;
+    color:rgb(232, 193, 40);
+    text-shadow:5px 3px 2.6px rgb(156, 76, 113);
+     /* abscisse ordonnee blur(flou) */
+    font-family: 'Nunito Sans', sans-serif;
+}
+main {
+    background-color: rgba(237, 228, 228, 0.59);
+    text-align: left;
+    width: 85%;
+    min-height: 500px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 0 black;
+
+}
+
+.positioning,
+.flexbox,
+.grid {
+    border: 2px solid skyblue;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+/******************** Positioning ********************/
+
+.positioning {
+    position: relative;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+
+}
+
+#circle {
+    height: 60px;
+    width: 60px;
+    background: violet;
+    padding: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: 110px;
+    box-shadow: 0 2px 12px 5px aquamarine;
+    z-index: 1;
+
+}
+#rectangle {
+    height: 15px;
+    width: 100px;
+    background: brown;
+    padding: 20px;
+    position: absolute;
+    box-shadow: 0 2px 12px 5px  cornsilk;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/************************ Flexbox **********************/
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+    font-size: 0.7rem;
+    height: 160px;
+    width: 160px;
+    background:turquoise;
+    /* centrer verticalement */
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+/*************************Grid**************************/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 10px;
+        
+}
+.img {
+    text-align: center
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'i1 i2'
+    'ta ta'
+    'bt bt';
+
+}
+input,
+textarea {
+    margin: 5px;
+    height:45px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: "font-1";
+}
+#firstname {
+    grid-area: i1;
+}
+#surname {
+    grid-area: i2;
+}
+textarea {
+grid-area: ta;
+resize: none;
+}
+input[type="submit"] {
+    grid-area: bt;
+    cursor: pointer;
+    background: cyan;
+    transition: 0.4s;
+
+}
+input[type="submit"]:hover {
+    background:darkblue;
+    color:wheat;
+}
+
+/**********************Responsive****************************/
+
+@media screen and (max-width: 1000px) {  
+.grid-container {
+    display: block;
+
+} }
+@media screen and (max-width: 780px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        'i1'
+        'i2'
+        'ta'
+        'bt';
+    
+    }
+}
