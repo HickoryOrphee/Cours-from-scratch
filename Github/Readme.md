@@ -42,6 +42,6 @@ new version pour voir la version 2 hihi
 * git push --7-upstream origin nomdebranch =crééer la branch sur github(commande a rentrer sur bash dans dossier nomdebranch)
 #### Pour commit son projet online
 * git add . 
-* git commit -n "nom des modifications effectcuées" pour communiquer avé lé cop1
+* git commit -m "nom des modifications effectcuées" pour communiquer avé lé cop1
 * git push -u origin main =
 
