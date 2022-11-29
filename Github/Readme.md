@@ -30,8 +30,7 @@ new version pour voir la version 2 hihi
     
 ### Travailler en equipe
 * READ ME.md # titre ## sous titre
-* .git ignore fichier a creer dans le dossier pour renseigner les fichiers que 
-* l'on ne veut pas commits= /nomdufichier ou tous les fichiers dans le dossier= /*
+* git ignore fichier a creer dans le dossier pour renseigner les fichiers que l'on ne veut pas commits= /nomdufichier ou tous les fichiers dans le dossier= /*
 * git blame nomdufichier =afficher le connard qui a fait ca
 * git blame -L 10,20 nomduchier =afficher les lignes spécifiques
 #### Dépot distant
